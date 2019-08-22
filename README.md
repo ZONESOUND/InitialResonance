@@ -1,2 +1,2 @@
-### [InitialResonanc]( http://paulyuchen.com/InitialResonanc/)
+### [InitialResonance]( https://zonesound.github.io/InitialResonance/)
 
