@@ -33,7 +33,7 @@
     <div class="row mt-2" v-if="nowModeId==0" :key="1">
       <div class="col-4 col-sm-3 col-lg-2 fadeIn animated" v-for="i in 12" :class="'ani-delay-'+i*4">
         <div class="block">
-          <div class="content" @click="sendOsc('/object',i);activeObjId=i" :data-object-id="i"> <span class="text">{{i}}</span><img :src="'https://monoame.com/aramono/img/ara_obj-'+i+'.svg'"/></div>
+          <div class="content" @click="sendOsc('/object',i);activeObjId=i" :data-object-id="i"> <span class="text">{{i}}</span><img :src="'./img/icon/icon-`'+i+'.svg'"/></div>
         </div>
       </div>
     </div>
