@@ -1,5 +1,7 @@
 var socket = io("https://initialresonance.herokuapp.com/")
-
+socket.on('connect', function(s) {
+  console.log('connect to server!');
+})
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
 
@@ -113,7 +115,7 @@ var vm = new Vue({
       
     },
     sendOsc(address,message){
-
+      console.log("emit", address, {value: message});
       socket.emit("osc",{
         address: address,
         args: [
