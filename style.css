@@ -429,10 +429,10 @@ h1 {
   color: #111;
 }
 .block .content img {
-  width: 70%;
+  width: 90%;
   position: absolute;
-  left: 50%;
-  top: 54%;
+  left: 57%;
+  top: 57%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
