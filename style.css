@@ -420,7 +420,7 @@ h1 {
   color: black;
 }
 .block .content span.text {
-  font-size: 8vmin;
+  font-size: 6vmin;
   font-weight: 900;
   position: absolute;
   left: 10%;
@@ -429,7 +429,7 @@ h1 {
   color: #111;
 }
 .block .content img {
-  width: 90%;
+  width: 70%;
   position: absolute;
   left: 50%;
   top: 54%;
