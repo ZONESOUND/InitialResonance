@@ -429,9 +429,9 @@ h1 {
   color: #111;
 }
 .block .content img {
-  width: 90%;
+  width: 88%;
   position: absolute;
-  left: 57%;
+  left: 54%;
   top: 57%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
