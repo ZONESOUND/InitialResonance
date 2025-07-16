@@ -1,4 +1,4 @@
-var socket = io("https://initialresonance.herokuapp.com/")
+var socket = io("https://initialresonance.zeabur.app/")
 socket.on('connect', function(s) {
   console.log('connect to server!');
 })
@@ -18,7 +18,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
       alpha:　event.alpha
     }
   }
-  
+
 }
 
 var vm = new Vue({
@@ -36,7 +36,7 @@ var vm = new Vue({
     osc_message: "1",
     osc_address: "/someaddress",
     modes: [
-      {name: "自由打擊",eng: "Free Play"},
+      {name: "生音點滴",eng: "Free Play"},
       {name: "旋律製造所", eng: "Rhythm Factory"}
     ],
     nowModeId: 0,
@@ -44,10 +44,10 @@ var vm = new Vue({
     accdata: {gamma: 0, beta: 0, alpha: 0}
   },
   mounted() {
-    
+
     socket.on("allMessage",(obj)=>{
       this.messages=obj
-    })    
+    })
     socket.on("newMessage",(obj)=>{
       console.log("new messages",obj)
       this.messages.push(obj)
@@ -57,16 +57,16 @@ var vm = new Vue({
     //      x: evt.pageX,
     //      y: evt.pageY
     //    })
-    // }) 
+    // })
     // socket.on("mouseMove",(obj)=>{
     //   $(".ball").css("left",obj.x+"px")
     //   $(".ball").css("top",obj.y+"px")
     // })
-    
+
     socket.on("typing",(value)=>{
       this.typing = value
     })
-    
+
     socket.on("osc",(value)=>{
       this.osc = value
       setTimeout(()=>{
@@ -78,7 +78,7 @@ var vm = new Vue({
           $("[data-object-id="+value.args[0].value+"]").removeClass("active")
         },10)
       }
-      
+
       if (value.address=="/note"){
         $("[data-note-id="+value.args[0].value+"]").addClass("active")
         setTimeout(()=>{
@@ -92,12 +92,12 @@ var vm = new Vue({
         },10)
       }
     })
-    
-    
+
+
   },
   methods: {
     switchMode(delta){
-      // this.nowModeId = (this.nowModeId+delta + this.modes.length)% this.modes.length
+      this.nowModeId = (this.nowModeId+delta + this.modes.length)% this.modes.length
       this.nowModeId = 0
     },
     sendMessage(){
@@ -112,7 +112,7 @@ var vm = new Vue({
     },
     drumHit2(){
       socket.emit("hit2")
-      
+
     },
     sendOsc(address,message){
       console.log("emit", address, {value: message});
@@ -122,7 +122,7 @@ var vm = new Vue({
           {value: message}
         ]
       })
-      
+
     },
     someEvent(){
       socket.emit("osc",{

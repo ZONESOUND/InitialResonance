@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Initial Resonance</title>
+  <meta name="viewport" content="width=device-width"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<div id="app">
+  <!-- <div class="loading fadeOut animated delay-ani-50"><img class="fadeIn animated delay-ani-10" src=""/></div> -->
+  <div class="container-fluid fadeIn">
+    <div class="row">
+      <div class="col-sm-8 col-title">
+        <h1>PLAY<br>GROUND</h1>
+        <div class="cirs">
+          <div class="cir c1"></div>
+          <div class="cir c2"></div>
+          <div class="cir c3"></div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <h6 class="text-center status">&nbsp;{{osc}}</h6>
+        <div class="col-sm-12">
+          <div class="switchButton"><i class="fa" @click="switchMode(1)"></i><span class="info fadeIn animated" :key="nowModeId"><span class="small">{{ nowMode.eng }}</span><span>{{ nowMode.name }}</span></span><i class="fa" @click="switchMode(1)"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2" v-if="nowModeId==0" :key="1">
+      <div class="col-4 col-sm-3 col-lg-2 fadeIn animated" v-for="i in 12" :class="'ani-delay-'+i*4">
+        <div class="block">
+          <div class="content" @click="sendOsc('/object',i);" :data-object-id="i"> <span class="text">{{i}}</span><img :src="'./img/icon-202207/icon-'+i+'.svg'"/></div>
+        </div><!--activeObjId=i-->
+      </div>
+    </div>
+    <div class="row mt-5 keyboard" v-if="nowModeId==1" :key="2">
+      <div class="fadeIn animated" v-for="i in 10" :class="'ani-delay-'+i*4">
+        <div class="block small">
+          <div class="content" @click="sendOsc('/note',i)" :data-note-id="i"> <span class="text">{{ noteNames[i-1] }}  </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
