@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: .75px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fdf660;
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        stroke-width: .25px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="25" cy="25.09" r="18.87"/>
+  <circle class="cls-1" cx="25" cy="25.09" r="17.89"/>
+  <ellipse class="cls-2" cx="25" cy="25.09" rx="16.03" ry="16.22" transform="translate(-10.17 29.29) rotate(-51.91)"/>
+  <circle class="cls-2" cx="34.64" cy="28.04" r="4.18"/>
+  <circle class="cls-2" cx="28.58" cy="34.32" r="4.18"/>
+  <circle class="cls-2" cx="19.54" cy="33.76" r="4.18"/>
+  <circle class="cls-2" cx="15" cy="26.69" r="4.18"/>
+  <circle class="cls-2" cx="17.28" cy="18.26" r="4.18"/>
+  <circle class="cls-2" cx="25.4" cy="14.68" r="4.18"/>
+  <circle class="cls-2" cx="33.09" cy="19.17" r="4.18"/>
+  <circle class="cls-2" cx="25.08" cy="24.37" r="4.18"/>
+  <path class="cls-1" d="M32.27,7.67l1.35-1.14c.75-.63,1.83-.66,2.6-.05l3.35,2.63c.72.56.98,1.53.64,2.38l-.64,1.61"/>
+  <polyline class="cls-1" points="34.11 8.59 35 7.45 38.53 10.22 37.71 11.26"/>
+  <path class="cls-1" d="M16.9,42.17l-1.4,1.07c-.78.59-1.87.56-2.6-.09l-3.21-2.8c-.69-.6-.9-1.58-.52-2.41l.72-1.58"/>
+  <polyline class="cls-1" points="15.1 41.15 14.15 42.24 10.78 39.29 11.65 38.29"/>
+</svg>

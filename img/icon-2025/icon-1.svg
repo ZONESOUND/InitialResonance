@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fdf660;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <polyline class="cls-2" points="21.66 39.27 23.39 12.08 9.93 33.17"/>
+  <polyline class="cls-2" points="39.78 35.42 23.39 12.08 46.27 2.39"/>
+  <ellipse class="cls-1" cx="23.88" cy="35.42" rx="15.9" ry="4.37"/>
+  <path class="cls-1" d="M7.98,35.42s.64,6.65,15.9,6.65,15.9-6.65,15.9-6.65"/>
+</svg>
